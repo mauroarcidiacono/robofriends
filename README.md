@@ -1,70 +1,19 @@
-# Getting Started with Create React App
+# Robofriends
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is my first React.js project. I built it by following Andrei Neagoie teachings in the Zero To Mastery Academy. React stablishes a component focused style of development that create a network, reducing dependencies. The library has a one way data-flow, where the direction of the data is always downstream and only the child react to changes of the parent. React describes the current state of the website with a copy of the DOM which is stored in a JavaScript object.  
 
-## Available Scripts
+Following the [documentation](https://reactjs.org/docs/create-a-new-react-app.html), I started the React application by typing:
 
-In the project directory, you can run:
+    npx create-react-app my-app
+    cd my-app
+    npm start
+    
+The project has four components: Card, CardList, Scroll and SearchBox. App is the container that is imported in index and rendered. 
 
-### `npm start`
+The robots are sourced from https://robohash.org/ and the names and emails are fetched from https://jsonplaceholder.typicode.com/users when componentDidMount() is run. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The class app defines a robots array and a searchfield variable. The SearchBox component receives a searchChange argument that sets the state of searchfield to the string that is written in the search box of the app. Then, as an event is triggered because something was typed in the input box, render runs again but this time a filter acts by applying the includes() method. This is passed as filteredRobots to the CardList component and now only the cards that were not filtered can be seen. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The Scroll component wraps the CardList component and applies a style to the children, which are the cards.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Try the app and find your robofriend by typing its name! 
