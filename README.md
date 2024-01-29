@@ -1,6 +1,6 @@
 # Robofriends
 
-This is my first React.js project. I built it by following Andrei Neagoie teachings in the Zero To Mastery Academy. React stablishes a component focused style of development that create a network, reducing dependencies. The library has a one way data-flow, where the direction of the data is always downstream and only the child react to changes of the parent. React describes the current state of the website with a copy of the DOM which is stored in a JavaScript object.  
+This is my first React.js project. I built it by following Andrei Neagoie teachings in the Zero To Mastery Academy. React stablishes a component focused style of development that creates a network, reducing dependencies. The library has a one way data-flow, where the direction of the data is always downstream and only the child react to changes of the parent. React describes the current state of the website with a copy of the DOM which is stored in a JavaScript object.  
 
 Following the [documentation](https://reactjs.org/docs/create-a-new-react-app.html), I started the React application by typing:
 
